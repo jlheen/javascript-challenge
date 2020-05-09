@@ -29,9 +29,6 @@ function makeTable(data) {
 };
 
 function handleClick() {
-    // if "enter" or "space" are pressed
-    if(d3.event.keyCode === 32 || d3.event.keyCode === 13) 
-    {console.log("Congrats, you pressed enter or space")};
     var date = d3.select("#datetime").property("value");
     var filteredData = tableData;
     filteredData = filteredData.filter(row => row.datetime === date);
