@@ -20,3 +20,19 @@ data.forEach(function(sightings) {
         cell.text(value);
     });
 });
+
+
+function handleClick() {
+    var date = d3.select("#datetime").property("value");
+    var filteredData = tableData;
+    filteredData = filteredData.filter(row => row.datetime === date);
+    makeTable(filteredData);
+    console.log("Filtered on datetime")
+}
+
+
+
+// filter table on "Filter Table" button click
+d3.selectAll("#filter-btn").on("click", handleClick);
+// filter table on pressing "return" button
+d3.selectAll(".form-control").on("keypress", handleClick);
