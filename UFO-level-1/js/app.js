@@ -21,7 +21,6 @@ data.forEach(function(sightings) {
     });
 });
 
-
 function handleClick() {
     var date = d3.select("#datetime").property("value");
     var filteredData = tableData;
@@ -29,8 +28,6 @@ function handleClick() {
     makeTable(filteredData);
     console.log("Filtered on datetime")
 }
-
-
 
 // filter table on "Filter Table" button click
 d3.selectAll("#filter-btn").on("click", handleClick);
