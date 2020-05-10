@@ -21,6 +21,8 @@ data.forEach(function(sightings) {
     });
 });
 
+// create a function to filter the table data based on the desired 
+// user input (date of potential sighting)
 function handleClick() {
     var date = d3.select("#datetime").property("value");
     var filteredData = tableData;
